@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">MConvert</string>
+<array name="fonts">
+    <item>Myanmarthree</item>
+    <item>Our</item>
+
+    <item>Tharlon</item>
+</array>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_mmconvert">MMConvertActivity</string>
+    <string name="title_activity_setting">Setting</string>
+    <string name="title_activity_pro">Pro</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_ads">Ads</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_activity_starting">Starting</string>
+</resources>

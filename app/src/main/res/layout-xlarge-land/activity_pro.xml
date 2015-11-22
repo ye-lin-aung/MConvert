@@ -1,0 +1,113 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:background="@color/background_material_dark"
+tools:context="com.plan.yelinaung.mmconvert.MMConvertActivity"
+    >
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:layout_gravity="center_horizontal">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TextView
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/original"
+            android:textColor="@color/textView_two"
+            android:layout_height="wrap_content"
+            android:text="Original Text"/>
+        <EditText
+            android:layout_below="@+id/original"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:id="@+id/edit_query"
+android:background="@drawable/square"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:hint="Enter Text Here"
+            android:textSize="25sp"
+
+            android:gravity="left"
+            android:paddingLeft="10dp"
+            android:textColor="@color/textView_color"
+            />
+
+        <Button
+
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paste All   "
+            android:textColor="@color/textView_color"
+            android:layout_below="@+id/edit_query"
+            android:id="@+id/paste" />
+
+
+
+        <TextView
+            android:paddingTop="5dp"
+            android:gravity="center"
+            android:fontFamily="sans-serif-medium"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/edited"
+            android:layout_below="@id/paste"
+            android:textColor="@color/textView_two"
+            android:layout_height="wrap_content"
+            android:text="Edited Text"/>
+
+        <EditText
+            android:layout_below="@+id/edited"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/edited_query"
+android:background="@drawable/square"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:hint="Edited Text"
+            android:textSize="25sp"
+
+            android:gravity="left"
+            android:paddingLeft="10dp"
+            android:textColor="@color/textView_color"
+            />
+        <!--android:background="#a1fff9c4"-->
+
+        <Button
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Copy All    "
+            android:textColor="@color/textView_color"
+            android:layout_below="@+id/edited_query"
+            android:id="@+id/copy" />
+
+
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lock"
+            android:textSize="12sp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/checkBox"    android:textColor="@color/textView_two"
+            android:layout_below="@+id/edit_query"
+            android:layout_toRightOf="@+id/clear"
+            android:checked="false" />
+
+    </RelativeLayout>
+</ScrollView>
+
+</LinearLayout>

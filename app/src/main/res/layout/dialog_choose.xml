@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RadioGroup
+    android:layout_width="400dp"
+    android:layout_height="wrap_content"
+     android:id="@+id/font_choose">
+
+
+
+    <RadioButton
+        android:layout_width="fill_parent"
+        android:id="@+id/m3"
+        android:layout_height="wrap_content"  android:text="Myanmar Three"/>
+
+    <RadioButton
+        android:layout_width="fill_parent"
+        android:id="@+id/our"
+        android:layout_height="wrap_content"  android:text="Our"/>
+
+    <RadioButton
+        android:layout_width="fill_parent"
+        android:id="@+id/Tharlon"
+        android:layout_height="wrap_content"  android:text="Tharlon"/>
+    <RadioButton
+        android:layout_width="fill_parent"
+        android:id="@+id/padauk_book"
+        android:layout_height="wrap_content"  android:text="Padauk"/>
+    <RadioButton
+        android:layout_width="fill_parent"
+        android:id="@+id/mon_three"
+        android:layout_height="wrap_content"  android:text="Mon3"/>
+    <RadioButton
+        android:layout_width="fill_parent"
+        android:id="@+id/pyi"
+        android:layout_height="wrap_content"  android:text="Pyidaung Su"/>
+
+
+</RadioGroup>
+</LinearLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.plan.yelinaung.mmconvert" >
+
+    <uses-sdk android:minSdkVersion="14" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+
+
+        android:allowBackup="true"
+        android:icon="@drawable/m_convert"
+
+        android:label="@string/app_name"
+        android:theme="@style/CustomActionBarTheme" >
+        <activity
+            android:name=".Starting"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.tooleap.sdk.TooleapAppService" />
+        <service
+            android:name="com.tooleap.sdk.TooleapUIService"
+            android:exported="true"
+            android:process=":UIService" >
+            <intent-filter>
+                <action android:name="com.tooleap.sdk.BIND_UI_SERVICE" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".MMConvertActivity"
+            android:label="@string/title_activity_mmconvert"
+            android:launchMode="singleInstance"
+            android:taskAffinity=".tooleap"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+
+
+            <intent-filter>
+                <action android:name="com.tooleap.sdk.TOOLEAP_SHOW" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="com.tooleap.sdk.TooleapReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.tooleap.sdk.TOOLEAP_ACTION" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".MMConvertActivity$CloseReceiver"
+/>
+
+
+
+
+
+
+
+        <meta-data
+            android:name="com.tooleap.sdk.apiKey"
+            android:value="4E4BF0FAADB3AB31BB3" />
+
+        <activity
+            android:name=".Pro"
+            android:label="@string/title_activity_pro" >
+        </activity>
+        <activity
+            android:name=".Settings"
+            android:label="@string/title_activity_settings" >
+        </activity>
+        <activity
+            android:name=".Ads"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_ads"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_starting" >
+        </activity>
+        <receiver android:name=".Recievers.ClipBoardReceiver" android:exported="true" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+
+
+        </receiver>
+
+        <service android:name=".Services.BackgroundService" />
+        <activity android:name=".AboutActivity"
+            />
+    </application>
+
+</manifest>

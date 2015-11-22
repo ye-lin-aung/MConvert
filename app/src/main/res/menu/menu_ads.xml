@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context="com.plan.yelinaung.mmconvert.Ads">
+    <item android:id="@+id/about_" android:title="info"
+        android:icon="@drawable/info_clicked"
+        app:showAsAction="ifRoom"
+        />
+</menu>

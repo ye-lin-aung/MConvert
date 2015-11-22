@@ -1,0 +1,2 @@
+configurations.create("default")
+artifacts.add("default", file('tooleap-sdk-0.9.6.jar'))
